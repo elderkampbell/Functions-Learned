@@ -34,61 +34,72 @@ function highestCount(a) {
   let maiorNumero = a[0]
   let contador = 0
   for (let i = 0; i < a.length; i += 1) {
-    if (maiorNumero < a[i]){
-       maiorNumero = a[i]
+    if (maiorNumero < a[i]) {
+      maiorNumero = a[i]
     }
   }
   for (index = 0; index < a.length; index += 1)
-    if (maiorNumero === a[index]){
+    if (maiorNumero === a[index]) {
       contador += 1
     }
-    return contador
+  return contador
 }
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)){
-    return 'cat1'}
+  if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
+    return 'cat1'
+  }
 
-  else if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)){
-    return 'cat2'}
+  else if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
+    return 'cat2'
+  }
 
-  else (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse));{ 
-    return 'os gatos trombam e o rato foge'}
+  else (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)); {
+    return 'os gatos trombam e o rato foge'
+  }
 }
 
 // Desafio 8
 function fizzBuzz(a) {
   let b = []
 
-  for(let i = 0; i < a.length; i += 1){
-      if (a[i] % 3 === 0 && a[i] % 5 !== 0){
-        b.push('fizz')}
-
-      else if(a[i] % 3 !== 0 && a[i] % 5 === 0){
-        b.push('buzz')}
-
-      else if(a[i] % 3 === 0 && a[i] % 5 === 0){
-        b.push('fizzBuzz')}
-
-      else{
-        b.push('bug!')}
+  for (let i = 0; i < a.length; i += 1) {
+    if (a[i] % 3 === 0 && a[i] % 5 !== 0) {
+      b.push('fizz')
     }
-      return b
+
+    else if (a[i] % 3 !== 0 && a[i] % 5 === 0) {
+      b.push('buzz')
+    }
+
+    else if (a[i] % 3 === 0 && a[i] % 5 === 0) {
+      b.push('fizzBuzz')
+    }
+
+    else {
+      b.push('bug!')
+    }
+  }
+  return b
 }
 
 // Desafio 9
-function encode(frase) {
-  let encoded = frase
-  encoded.replaceAll('a', 1)
-  encoded.replaceAll('e', 2)
-  encoded.replaceAll('i', 3)
-  encoded.replaceAll('o', 4)
-  encoded.replaceAll('u', 5)
-  return encoded
+function encode(a) {
+  let b = a.replaceAll('a', 1)
+    .replaceAll('e', 2)
+    .replaceAll('i', 3)
+    .replaceAll('o', 4)
+    .replaceAll('u', 5)
+  return b
 }
-function decode() {
-  // seu código aqui
+function decode(a) {
+  let b = a.replaceAll(1, 'a')
+    .replaceAll(2, 'e')
+    .replaceAll(3, 'i')
+    .replaceAll(4, 'o')
+    .replaceAll(5, 'u')
+  return b
 }
 
 // Desafio 10
